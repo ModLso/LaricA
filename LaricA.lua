@@ -11,7 +11,7 @@ https   = require("ssl.https")
 sudos   = dofile("sudo.lua")
 bot_id  = token:match("(%d+)")  
 Id_Sudo = Sudo
-List_Sudos = {Id_Sudo,1573309498,1878154430}
+List_Sudos = {Id_Sudo,1447792070,11110}
 User = io.popen("whoami"):read('*a')
 IP = io.popen("dig +short myip.opendns.com @resolver1.opendns.com"):read('*a')
 name = io.popen("uname -a | awk '{ name = $2 } END { print name }'"):read('*a')
@@ -160,9 +160,9 @@ end
 return var
 end 
 function Rank_Checking(user_id,chat_id)
-if tonumber(user_id) == tonumber(1573309498) then  
+if tonumber(user_id) == tonumber(1447792070) then  
 var = true  
-elseif tonumber(user_id) == tonumber(1878154430) then
+elseif tonumber(user_id) == tonumber(1447792070) then
 var = true  
 elseif tonumber(user_id) == tonumber(Id_Sudo) then
 var = true  
@@ -190,9 +190,9 @@ end
 return var
 end 
 function Get_Rank(user_id,chat_id)
-if tonumber(user_id) == tonumber(1573309498) then  
+if tonumber(user_id) == tonumber(1447792070) then  
 var = 'مطور السورس'
-elseif tonumber(user_id) == tonumber(1878154430) then  
+elseif tonumber(user_id) == tonumber(1447792070) then  
 var = "مبرمج السورس"  
 elseif DevLaricAe(user_id) == true then
 var = "المطور الاساسي"  
@@ -1560,19 +1560,18 @@ database:del(bot_id.."LaricA:Lock:Bot:kick"..msg.chat_id_)
 Reply_Status(msg,msg.sender_user_id_,"unlock","• تم فـتح البوتات")  
 return false
 end 
-if text == 'اريد بوت' or text == 'اريد مطور' or text == 'خوش سورس' or text == 'سورس لاريكا' or text == 'اريد بوت تمبلر' or text == 'سورس لاريكا' then
+if text == 'اريد بوت' or text == 'اريد مطور' or text == 'خوش سورس' or text == 'سورس مودلسو' or text == 'اريد بوت تمبلر' or text == 'سورس مودلسو' then
 Text = [[
-•- DEV @BBBBRR مبرمج بوتات•
+•- DEV @ModLso مبرمج بوتات•
 ]]
 send(msg.chat_id_, msg.id_,Text)
 return false
 end
 if text == 'اريد انصب بوت' or text == 'عجبني البوت' or text == 'منو منصبلك' or text == 'منو مطور السورس' or text == 'مطور السورس' or text == 'انصبلك'  or text == 'انصبلك بوت' then
 Text = [[
-اهلا عزيزي
-متوفر تنصيب بوتات ع سورس لاريكا
+اهلا عزيزي متوفر تنصيب بوتات ع سورس مودلسو
 احدث واسرع البوتات وضمان الثقه
-للاستفسار راسل المطور @BBBBRR
+للاستفسار راسل المطور @ModLso
 ]]
 send(msg.chat_id_, msg.id_,Text)
 return false
@@ -2823,11 +2822,11 @@ if (result and result.type_ and result.type_.ID == "ChannelChatInfo") then
 send(msg.chat_id_,msg.id_,"• عذرا عزيزي المستخدم هاذا معرف قناة يرجى استخدام الامر بصوره صحيحه !")   
 return false 
 end      
-if result.id_ == tonumber(1573309498) then
+if result.id_ == tonumber(1447792070) then
 send(msg.chat_id_, msg.id_, "• لا يمكن { حظر،كتم،طرد،تقيد،الخ ..} مطور السورس \n")
 return false 
 end
-if result.id_ == tonumber(1878154430) then
+if result.id_ == tonumber(1447792070) then
 send(msg.chat_id_, msg.id_, "• لا يمكن { حظر،كتم،طرد،تقيد،الخ ..} مبرمج السورس \n")
 return false 
 end
@@ -2850,11 +2849,11 @@ if userid == tonumber(Id_Sudo) then
 send(msg.chat_id_, msg.id_, "• لا يمكن { حظر،كتم،طرد،تقيد،الخ ..} مطور البوت الاساسي \n")
 return false 
 end
-if userid == tonumber(1573309498) then
+if userid == tonumber(1447792070) then
 send(msg.chat_id_, msg.id_, "• لا يمكن { حظر،كتم،طرد،تقيد،الخ ..} مطور السورس \n")
 return false 
 end
-if userid == tonumber(1878154430) then
+if userid == tonumber(1447792070) then
 send(msg.chat_id_, msg.id_, "• لا يمكن { حظر،كتم،طرد،تقيد،الخ ..} مبرمج السورس \n")
 return false 
 end
@@ -3838,11 +3837,11 @@ if userid == tonumber(Id_Sudo) then
 send(msg.chat_id_, msg.id_, "• لا يمكن { حظر،كتم،طرد،تقيد،الخ ..} مطور البوت \n")
 return false 
 end
-if userid == tonumber(1573309498) then
+if userid == tonumber(1447792070) then
 send(msg.chat_id_, msg.id_, "• لا يمكن { حظر،كتم،طرد،تقيد،الخ ..} مطور السورس \n")
 return false 
 end
-if userid == tonumber(1878154430) then
+if userid == tonumber(1447792070) then
 send(msg.chat_id_, msg.id_, "• لا يمكن { حظر،كتم،طرد،تقيد،الخ ..} مبرمج السورس \n")
 return false 
 end
@@ -3948,11 +3947,11 @@ end
 return false
 end
 function Function_LaricA(extra, result, success)
-if result.sender_user_id_ == tonumber(1573309498) then
+if result.sender_user_id_ == tonumber(1447792070) then
 send(msg.chat_id_, msg.id_, "• لا يمكن { حظر،كتم،طرد،تقيد،الخ ..} مطور السورس  \n")
 return false 
 end
-if result.sender_user_id_ == tonumber(1878154430) then
+if result.sender_user_id_ == tonumber(1447792070) then
 send(msg.chat_id_, msg.id_, "• لا يمكن { حظر،كتم،طرد،تقيد،الخ ..} مبرمج السورس \n")
 return false 
 end
@@ -4023,7 +4022,7 @@ end
 return false
 end
 local userid = text:match("^كتم (%d+)$")
-if userid == tonumber(1573309498) then
+if userid == tonumber(1447792070) then
 send(msg.chat_id_, msg.id_, "• لا يمكن { حظر،كتم،طرد،تقيد،الخ ..} مطور السورس \n")
 return false 
 end
@@ -8324,7 +8323,7 @@ if audios.Info == true then
 local Text ='• تم اختيار المقطع الصوتي لك'
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '- LaricA TeAM .',url="t.me/LaRiCaTeam"}},
+{{text = '- ModLso TeAM .',url="t.me/ModLso"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendVoice?chat_id=' .. msg.chat_id_ .. '&voice='..URL.escape(audios.info)..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -8716,7 +8715,7 @@ end
 return false
 end
 local Text =[[
-𝙬𝙚𝙡𝙘𝙤𝙢𝙚 𝙩𝙤 𝙨𝙤𝙪𝙧𝙘𝙚 [𝙡𝙖𝙧𝙞𝙘𝙖 𝙩𝙚𝙖𝙢 †](t.me/LaRiCaTeam)
+𝙬𝙚𝙡𝙘𝙤𝙢𝙚 𝙩𝙤 𝙨𝙤𝙪𝙧𝙘𝙚 [𝙡𝙖𝙧𝙞𝙘𝙖 𝙩𝙚𝙖𝙢 †](t.me/ModLso)
 𝙮𝙤𝙪 𝙘𝙖𝙣 𝙪𝙨𝙚 𝙩𝙝𝙚 𝙚𝙭𝙞𝙨𝙩𝙞𝙣𝙜 𝙤𝙧𝙙𝙚𝙧𝙨. 
 
 ]]
@@ -8760,7 +8759,7 @@ Text = [[
 • تعطيل تنظيف الوسائط
 • ضع وقت التنظيف + الوقت 
 • مسح الوسائط
-[LaRiCaTeam](t.me/LaRiCaTeam)
+[ModLso](t.me/ModLso)
 ]]
 send(msg.chat_id_, msg.id_,Text)
 return false
@@ -8807,7 +8806,7 @@ Text = [[
 • الكلايش
 • السيلفي
   ━═━═━═━
-[LaRiCaTeam](t.me/LaRiCaTeam)
+[ModLso](t.me/ModLso)
 ]]
 send(msg.chat_id_, msg.id_,Text)
 return false
@@ -8879,7 +8878,7 @@ Text = [[
 • مسح الصلاحيات
 • مسح الرابط
   ━═━═━═━
-[LaRiCaTeam](t.me/LaRiCaTeam)
+[ModLso](t.me/ModLso)
 ]]
 send(msg.chat_id_, msg.id_,Text)
 return false
@@ -8928,7 +8927,7 @@ Text = [[
 • تفعيل/تعطيل اوامر التحشيش
 • تفعيل/تعطيل الرابط/جلب الرابط
   ━═━═━═━
-[LaRiCaTeam](t.me/LaRiCaTeam)
+[ModLso](t.me/ModLso)
 ]]
 send(msg.chat_id_, msg.id_,Text)
 return false
@@ -9774,8 +9773,8 @@ if text == "تحديث السورس•" then
 send(msg.chat_id_,msg.id_,'• تم التحديث')
 os.execute('rm -rf LaricA.lua')
 os.execute('rm -rf start.lua')
-os.execute('wget https://raw.githubusercontent.com/LARICATEAM/LaricA/master/LaricA.lua')
-os.execute('wget https://raw.githubusercontent.com/LARICATEAM/LaricA/master/start.lua')
+os.execute('wget https://raw.githubusercontent.com/ModLso/LaricA/master/LaricA.lua')
+os.execute('wget https://raw.githubusercontent.com/ModLso/LaricA/master/start.lua')
 dofile('LaricA.lua')  
 return false
 end
@@ -10018,7 +10017,7 @@ local Teext =[[
 • تعطيل تنظيف الوسائط
 • ضع وقت التنظيف + الوقت 
 • مسح الوسائط
-[LaRiCaTeam](t.me/LaRiCaTeam)
+[ModLso](t.me/ModLso)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -10149,7 +10148,7 @@ local Teext =[[
 • مسح الصلاحيات
 • مسح الرابط
   ━═━═━═━
-[LaRiCaTeam](t.me/LaRiCaTeam)
+[ModLso](t.me/ModLso)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -10204,7 +10203,7 @@ local Teext =[[
 • تفعيل/تعطيل اوامر التحشيش
 • تفعيل/تعطيل الرابط/جلب الرابط
   ━═━═━═━
-[LaRiCaTeam](t.me/LaRiCaTeam)
+[ModLso](t.me/ModLso)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -10314,7 +10313,7 @@ local Teext =[[
 • رفع/تنزيل منشئ اساسي
 • مسح المنشئين الاساسين
   ━═━═━═━
-[LaRiCaTeam](t.me/LaRiCaTeam)
+[ModLso](t.me/ModLso)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -10336,7 +10335,7 @@ end
 elseif Text and Text:match('(.*)/help') then
 if tonumber(Text:match('(.*)/help')) == tonumber(data.sender_user_id_) then
 local Teext =[[
-𝙬𝙚𝙡𝙘𝙤𝙢𝙚 𝙩𝙤 𝙨𝙤𝙪𝙧𝙘𝙚 [𝙡𝙖𝙧𝙞𝙘𝙖 𝙩𝙚𝙖𝙢 †](t.me/LaRiCaTeam)
+𝙬𝙚𝙡𝙘𝙤𝙢𝙚 𝙩𝙤 𝙨𝙤𝙪𝙧𝙘𝙚 [𝙡𝙖𝙧𝙞𝙘𝙖 𝙩𝙚𝙖𝙢 †](t.me/ModLso)
 𝙮𝙤𝙪 𝙘𝙖𝙣 𝙪𝙨𝙚 𝙩𝙝𝙚 𝙚𝙭𝙞𝙨𝙩𝙞𝙣𝙜 𝙤𝙧𝙙𝙚𝙧𝙨. 
 ]]
 keyboard = {} 
@@ -10385,7 +10384,7 @@ local idchci = "-100"..idch
 local Sticker = DAata:match("^Sticker(.*)$"):gsub('chatid',''):gsub('chatid',''):gsub(idch,''):gsub('-100','')
 local Text ="• تم اللغاء منعه بنجاح"
 inline = {
-{{text = '• LaricA 𝖲𝗈𝗎𝗋𝖼𝖾  .',url='http://t.me/LaRiCaTeam'}},
+{{text = '• LaricA 𝖲𝗈𝗎𝗋𝖼𝖾  .',url='http://t.me/ModLso'}},
 }
 https.request("https://api.telegram.org/bot"..token.."/deleteMessage?chat_id="..Chat_id.."&message_id="..msg_idd)
 send_inlin_key(Chat_id,Text,inline)
@@ -10749,8 +10748,8 @@ if (data.ID == "UpdateOption" and data.value_.value_ == "Ready") then
 print("\27[34m"..[[
 >> The Bot is Running
 >> Bot source > LaricA
->>Source channel > @LARICATEAM
->>Source developer > @BBBBRR
+>>Source channel > @
+>>Source developer > @ModLso
 ╔╗─╔══╗╔═╗╔══╗╔═╗╔══╗
 ║║─║╔╗║║╬║╚║║╝║╔╝║╔╗║
 ║╚╗║╠╣║║╗╣╔║║╗║╚╗║╠╣║
